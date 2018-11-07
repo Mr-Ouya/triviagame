@@ -8,162 +8,23 @@
     <title>Trivia</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css">
+   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
 
   <body>
+    <h1>Game of Thrones Trivia</h1>
+    <div class="card"><h3>Seconds Remaining</h3>
+    <div id="timeRemaining"></div>
+    </div>
 <!--Main body to hold questions-->
-<div class="jumbotron text-center main-section">
-    <div class="card" id="timerContainer">
-        <div class="text-center">
-            <p>Seconds Remaining:<div id="secondssLeft">15</div> </p>
-        </div>
-    </div>
-
-    <div class="btnContainer">
-        <button id ="startBtn" type="button" class = "btn-lg startBtn">START</button>
-    </div>
-</div>
-
-    <div id="quiz"></div>
-
-    <div id="results"></div>
+<div id="triviaBody"></div>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
 
 
-    
+    <script src="./assets/Javascript/app.js"></script>
 
-    <script type="text/javascript">
-     var countDown=false;
-<div id = "appendHere">
-    </div>
-/*On click start program and hide start button*/
-//$('#startButton').click(function(){
-        //$('#startButton').hide();
-        var score = 0;
-        $('#startBtn').click(function(){
-        $('#startBtn').hide();
-        setTimeout(showResults, 15000 * 1);
-
-    /*Declare global variables*/
-   
-    /*
-    var questions = [ "What drink do Warlocks drink?",
-     "What is the name of the Warlock who kidnapped Daenarys and her dragons?", 
-     "What drug classification is the warlocks favorite drink?", 
-     "What is the name of the Warlock compound in Quarth?", 
-     "What is the name of the dragon who saves Daenyrs from the Warlocks at Quarth?"]
-     var possibleAnswers1 =
-        ["Death in the Afternoon", "Coronation", "Shade of The Evening", "White Lady"]
-    var possibleAnswers2=
-    ["Pyat Pree", "Wolf", "Wun Weg Wun Dar Wun", "Styr"]
-    var possibleAnswers3= 
-    ["House of Black and White", "Duskendale", "House of the Undying", "Longclaw"]
-    var possibleAnswers4= 
-    ["Rhaegal", "Viserion", "Viserys", "Drogon"]
-       
-    var answer1 = "Shade of The Evening";
-    var answer2 = "Pyat Pree";
-    var answer3 = "House of the Undying";
-    var answer4 = "Drogon";
-    console.log(answer1);
-        countDown=true;
-       */
-         var myQuestions = [
-  {
-    question: "What drink do Warlocks drink?",
-    answers: {
-      a: "Death in the Afternoon",
-      b: "Coronation",  
-      c: "Shade of The Evening",
-      d: "White Lady"
-    },
-    correctAnswer: "c"
-  },
-  {
-    question: "What is the name of the Warlock who kidnapped Daenarys and her dragons?",
-    answers: {
-      a: "Pyat Pree",  
-      b: "Wolf",
-      c:  "Wun Weg Wun Dar Wun",
-      d: "Styr"
-    },
-    correctAnswer: "a"
-  },
-  {
-    question: "What is the name of the Warlock compound in Quarth?",
-    answers: {
-      a: "House of Black and White",   
-      b: "Duskendale",
-      c: "House of the Undying",
-      d: "Longclaw"
-    },
-    correctAnswer: "d"
-  },
-  {
-    question: "What is the name of the dragon who saves Daenyrs from the Warlocks at Quarth?",
-    answers: {
-      a: "Rhaegal",     
-      b: "Viserion",
-      c: "Viserys",
-      d: "Drogon" 
-    },
-    correctAnswer: "d"
-  }
-];
-
-
- /*      ques: "Nike was originally a distribution company for which brand?",
-            ans: ["Adidas", "New Balance", "Saucony", "Onitsuka Tiger"],
-            name: "distribution",
-            correct: "Onitsuka Tiger",
-           divClass: ".distribution"
-           */
-
-
-var displayQuestions = function() {
-    
-    // loops through the questions, after a button is pressed it 
-    for (var i = 0; i < myQuestions.length; i++) {
-        var output = [];
-        var answers;
-        var $currentQuestion = $('<div>');
-            $currentQuestion.html(questions[i].question);
-            $optionA.html(questions[i].a);
-            $opttionB.html(questions[i].b);
-            $optionC.html(questions[i].c);
-            $optionD.html(questions[i].d);
-            
-            
-            var $opt1 = $('<button>');
-            $opt1.addClass("answerOpt");
-            var $opt2 = $('<button>');
-            $opt2.addClass("answerOpt");
-            var $opt3 = $('<button>');
-            $opt3.addClass("answerOpt");
-            var $opt4 = $('<button>');
-            $opt4.addClass("answerOpt");
-
-    }
-}
-
-})
-
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </script>
 
 </body>
 </html>
